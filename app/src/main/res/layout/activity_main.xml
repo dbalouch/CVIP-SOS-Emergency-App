@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3EFFEB3B"
+    tools:context="com.dhanibux.myapplication.MainActivity">
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/soslogo"
+        android:contentDescription="@string/app_logo_description" />
+
+    <Button
+        android:id="@+id/sosButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_button_red"
+        android:onClick="onSOSButtonClicked"
+        android:text="Emergency SOS"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/sendMessageButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sosButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_button_blue"
+        android:onClick="onSendMessageButtonClicked"
+        android:text="Send Message"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/makeCallButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sendMessageButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_button_green"
+        android:onClick="onMakeCallButtonClicked"
+        android:text="Make Call"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/emergencyContactsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/makeCallButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Emergency Contacts"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <!-- Add the RecyclerView for displaying emergency contacts -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emergencyContactsLabel"
+        android:layout_marginTop="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="16dp" />
+
+</RelativeLayout>
